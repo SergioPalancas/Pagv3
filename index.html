@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">-->
+  <head>
+   <title>Prototipo</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <script type="text/javascript" src="jquery-3.2.1.js"></script>
+   <script type="text/javascript" src="jquery-ui.min.js"></script>
+
+   <!-- Referencias CSS -->
+   <link rel="stylesheet" type="text/css" href="./CSS/reset.css"/>
+   <link rel="stylesheet" type="text/css" href="./CSS/text.css"/>
+   <link rel="stylesheet" type="text/css" href="./CSS/960.css"/>
+
+   <!--Estilos del footer y resto-->
+   <link rel="stylesheet" type="text/css" href="./CSS/estilos.css"/>
+   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+
+   <!-- Estilo de Menu -->
+   <link rel="stylesheet" type="text/css" href="./CSS/menu.css">
+
+   <!--Estilos Slider-->
+   <link rel="stylesheet" href="CSS/estilosSlider.css">
+
+   <!-- Css para que se mueva el texto al hacer scroll-->
+   <link rel="stylesheet" href="CSS/style1.css">
+
+   <!-- Css del efecto del logotipo-->
+   <link rel="stylesheet" href="CSS/style.css">
+   <script  src="js/index.js"></script>
+
+
+
+
+   <!--Ficheros JS-->
+   <script src="js/jquery-3.1.0.min.js"></script>
+   <script src="js/main.js"></script>
+
+
+   <!--Tipos de Letras-->
+   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Croissant+One" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Quando" rel="stylesheet"> <!-- Texto para Producto-->
+
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+
+   <!-- Funcion al pasar el raton sobre las imagenes -->
+   <script type="text/javascript">  
+    $(document).ready(function(){  
+      $(".pasarRatonp1").mouseenter(function() {  
+        $(".pasarProducto1", this).stop().animate({ top:'259.5px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp1").mouseleave(function() {  
+        $(".pasarProducto1", this).stop().animate({ top:'440px' },{ queue:false, duration:150 });  
+      });
+
+      $(".pasarRatonp2").mouseenter(function() {  
+        $(".pasarProducto2", this).stop().animate({ top:'255px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp2").mouseleave(function() {  
+        $(".pasarProducto2", this).stop().animate({ top:'440px' },{ queue:false, duration:150 }); 
+      });
+
+      $(".pasarRatonp3").mouseenter(function() {  
+        $(".pasarProducto3", this).stop().animate({ top:'230px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp3").mouseleave(function() {  
+        $(".pasarProducto3", this).stop().animate({ top:'440px' },{ queue:false, duration:150 }); 
+      });
+
+      $(".pasarRatonp4").mouseenter(function() {  
+        $(".pasarProducto4", this).stop().animate({ top:'250.5px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp4").mouseleave(function() {  
+        $(".pasarProducto4", this).stop().animate({ top:'440px' },{ queue:false, duration:150 }); 
+      });
+
+      $(".pasarRatonp5").mouseenter(function() {  
+        $(".pasarProducto5", this).stop().animate({ top:'258px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp5").mouseleave(function() {  
+        $(".pasarProducto5", this).stop().animate({ top:'440px' },{ queue:false, duration:150 }); 
+      });
+
+      $(".pasarRatonp6").mouseenter(function() {  
+        $(".pasarProducto6", this).stop().animate({ top:'259.5px' },{ queue:false, duration:150 });  
+      });  
+      $(".pasarRatonp6").mouseleave(function() {  
+        $(".pasarProducto6", this).stop().animate({ top:'440px' },{ queue:false, duration:150 }); 
+      });
+    });  
+  </script> 
+
+  <!-- Funcion para el texto del producto5. -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".textoProducto4").mouseover(function(){
+       $(".textoProducto4 span").css("font-weight", "bolder");
+       $(".textoProducto4 span").css("color", "white");
+     });
+      $(".textoProducto4").mouseout(function(){
+       $(".textoProducto4 span").css("font-weight", "bolder");
+       $(".textoProducto4 span").css("color", "black");
+     });
+    });
+  </script>
+
+  <!-- Para cambiar la animacion de registro/acceso 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".registro").mouseover(function(){
+       $(".registro").text("!Registrate/Logueate!"); 
+       $(".registro").css("font-weight", "bolder");
+       $(".registro").css("color", "black");
+     });
+      $(".registro").mouseout(function(){
+        $(".registro").text("Registro/Acceso"); 
+        $(".registro").css("color", "purple");
+      });
+    });
+  </script>
+-->
+
+<!-- Recuadro para aceptar-->
+<script type="text/javascript">
+function Cookie(){
+    setCookie('usuarioRegistrado','1',365);
+    document.getElementById("barra").style.display="none";
+}
+</script>
+
+<script type="text/javascript"> 
+  $(document).ready(function(){
+    var altura = $('.menu').offset().top;
+
+    $(window).on('scroll', function(){
+      if ( $(window).scrollTop() > altura ){
+        $('.menu').addClass('menu-fixed');
+      } else {
+        $('.menu').removeClass('menu-fixed');
+      }
+    });
+  });
+</script>
+
+</head>
+<body>
+
+  <!--Contenedor General-->
+  <div class="container_12">
+
+   <!--Cabecera-->
+   <header class="grid_12">
+     <div class="container cf">
+       <div class="animation-element multi-step-left cf">
+        <div class="gallery">
+          <div class="alpha grid_2 suffix_1 image">
+            <img src="logo.png" alt="Logotipo"/>
+          </div>
+        </div>
+      </div>                                 
+    </div>
+
+    <div class="grid_9  menuD omega">
+     <div class="alpha grid_9 bloque1 omega">
+      <div class="registro">
+        <a href="./indexF.html">Registro</a>
+        <a href="./indexF.html">Acceso</a></div>
+        <a href=""> <img src="./Paises/spain.jpg" alt="Spanish"/></a>
+        <a href="" class="imagen"> <img src="./Paises/english.jpg" alt="English"/></a>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="alpha grid_9 buscador omega">
+        <form method="POST" action="hola.php">
+         <input type="text" name="buscador" size="50"/>
+         <i class="fa fa-search" aria-hidden="true"></i>
+       </form>
+     </div>
+     <div class="clear"></div>
+   </div>
+ </header>
+
+ <!-- Menu -->
+ <nav class="grid_12">
+  <div class="alpha grid_12">
+    <ul class="menu">
+      <li><a href="#" class="subrayado">Inicio</a></li>
+      <li>
+       <li><a href="#" class="subrayado">Figuras</a>
+       </li>
+       <li>
+        <a href="#" class="subrayado">Mangas</a>
+        <ul>
+          <li>
+            <a href="#">Shonen</a>
+            <ul>
+            </ul>         
+          </li>
+          <li>
+           <li><a href="#">Shojo</a>
+            <ul>
+            </ul>         
+          </li>
+        </ul>   
+      </li>
+      <li>
+       <li><a href="#" class="subrayado">Juegos</a>
+        <ul>
+          <li>
+            <a href="#">PS4</a>
+            <ul>
+            </ul>         
+          </li>
+          <li>
+            <a href="#">Xbox</a>
+            <ul>
+            </ul>         
+          </li>
+        </ul>
+      </li>
+      <li>
+       <li><a href="#" class="subrayado">Merchandasing</a> 
+        <ul>
+          <li>
+            <a href="#">Llaveros</a>       
+          </li>
+          <li>
+            <a href="#">Mochilas</a>      
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</nav>
+
+<p> <br>
+</p>
+
+<!--Carrusel-->
+<article class="grid_12">
+  <div class="grid_12">
+    <div class="carrusel">
+     <div class="slideshow">
+      <ul class="slider">
+        <li>
+          <img src="Imagenes/Carrusel/carr1.jpg" alt="Imagenes/carr1.jpg">
+        </li>
+        <li>
+          <img src="Imagenes/Carrusel/carr2.jpg" alt="Imagenes/carr2.jpg">
+        </li>
+        <li>
+          <img src="Imagenes/Carrusel/carr3.jpg" alt="Imagenes/carr3.jpg">
+        </li>
+        <li>
+          <img src="Imagenes/Carrusel/carr4.jpg" alt="Imagenes/carr4.jpg">
+        </li>
+      </ul>
+
+      <ol class="pagination">
+
+      </ol>
+
+      <div class="left">
+        <span class="fa fa-chevron-left"></span>
+      </div>
+
+      <div class="right">
+        <span class="fa fa-chevron-right"></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</article>
+
+<!--Productos-->
+<div class="animation-element bounce-up cf">
+  <div class="subject development">
+    <h2 class="pro">Productos</h2>
+  </div> 
+</div>
+<div class="clear"></div>
+
+<!--Producto1 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto1">
+   <div class="pasarRatonp1">
+     <img src="./Imagenes/caballeros.jpg" alt="caballeros"/>
+     <div class="pasarProducto1" style="top:360px;"><p>Saint Seiya Soul of Gold<br>
+     11.99€</p></div>
+   </div>   
+   <div style="text-align: justify" class="textoProducto1"> 
+     <div class="animation-element bounce-up cf">
+      <div class="subject design">
+        <span>Es la serie de anime mas reciente perteneciendo a la
+          franquicia de Saint Seiya, anunciada durante un evento
+          de la Tamashii Nations. La serie animada comenzó su
+          emision el día 11 de abril con una transmisión en línea 
+          disponible en más de 200 países y posteriormente fue 
+        puesta a la venta en forma Blue-ray.</span>
+      </div> 
+    </div>   
+  </div>
+</div>      
+</div>
+<div class="clear"></div>
+
+<!--Producto2 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto2">
+   <div style="text-align: justify" class="textoProducto2">
+    <span >Sora portador de la Llave Espada.</span>
+  </div>
+  <div class="pasarRatonp2">
+    <div class="animation-element bounce-up cf">
+      <div class="subject design">
+       <img src="./Imagenes/kingdom.jpg" alt="kingdom"/>
+       <div class="pasarProducto2" style="top:360px;"><p>Poster kingdom hearts<br>
+       5.99€</p> 
+     </div>  
+   </div>  
+ </div>  
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+<!--Producto3 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto3">
+    <div class="animation-element slide-left testimonial">
+      <div class="pasarRatonp3">
+     <img src="./Imagenes/muñeca-azul.jpg" alt="muñeca-azul"/>
+     <div class="pasarProducto3" style="top:360px;"><p>Muñeca<br>
+     19€</p></div>
+      </div>
+    </div>
+ </div>
+</div>
+<div class="clear"></div>
+
+<!--Producto4 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto4">
+    <div class="pasarRatonp4">
+     <img src="./Imagenes/one-piece.jpg" alt="one-piece"/>
+     <div class="pasarProducto4" style="top:360px;"><p>One-Piece Serie<br>
+     30€</p></div>
+   </div>
+   <div style="text-align: justify" class="textoProducto4"> 
+    <span>Es un anime producido por Toei Animation y </span>
+    <span>transmitido por Fuji Television. El primer </span>
+    <span>episodio salió al aire en Japon el 20 de Octubre</span>
+    <span>de 1999. El show continúa con más de 800</span>
+    <span>episodios, 13 películas y 12 especiales</span>
+    <span>de televisión.</span>
+  </div>  
+</div>
+</div>
+<div class="clear"></div>
+
+<!--Producto5 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto5">
+   <div class="textoProducto5"> 
+    <p>
+      Narra las aventuras de un adolescente <br>
+      llamado Ichigo Kurosaki, un estudiante<br>
+      de quince años que tiene la habilidad<br>
+      de interactuar con los espíritus.
+    </p>
+  </div>
+  <div class="pasarRatonp5">
+   <img src="./Imagenes/bleach.jpg" alt="bleach"/>
+   <div class="pasarProducto5" style="top:360px;"><p>Poster Bleach<br>
+   40€</p>
+ </div>
+</div>
+</div> 
+</div>
+<div class="clear"></div>
+
+
+
+<!--Producto6 -->
+<div class="alpha grid_12">
+  <div class="alpha grid_12 producto6">
+    <div class="pasarRatonp6">
+      <div class="cambiarColorImg">
+       <img src="./Imagenes/fullmetal.jpg" alt="fullmetal"/>
+       <img class="top" src="./Imagenes/fullmetal-bn.jpg" alt="fullmetal"/>
+       <div class="pasarProducto6" style="top:360px;">
+        <p>Pelicula FullMetal<br>11.99€</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+
+<!--Pie-->
+<footer class='grid_12'>
+ <div class="alpha grid_12 final">
+  <div class="alpha grid_4 contacto">
+   <h5>Contacto</h5>
+   <p><b>palancas.gmail.com<br/>
+   921212/494949494</b></p>
+ </div>
+
+ <div class="alpha grid_4 informacion">
+   <h5>Informacion</h5>
+   <a href="#">¿Quienes Somos?</a><br/>
+   <a href="#">Condiciones de uso</a><br/>
+   <a href="#">Condiciones de venta</a>
+ </div>
+
+ <div class="alpha grid_4 redes">
+  <a href="#" class="zoom" title="Facebook"> 
+    <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+    <a href="#" class="zoom" title="Twitter"> <i class="fa fa-twitter-square fa-3x " aria-hidden="true"></i></a>
+    <a href="#" class="zoom" title="Instagram"> <i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+  </div>
+</div>
+<div class="clear"></div>
+</footer>
+
+
+
+
+<!-- Script para que el texto se mueva -->
+<script  src="js/index1.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<div class="clear"></div> 
+
+
+
+</div>
+<div class="cookies" id="barra" style="display: block;">
+  <div class="cuadrocookie">
+    Esta Web utiliza cookies. Si sigues navegando, entendemos que aceptas las Condiciones de Uso.
+    <br>
+    <a href="javascript:void(0);" class="text-izquierdo" onclick="Cookie();"><b>Aceptar</b></a> | 
+    <a href="http://politicadecookies.com" target="_blank" class="text-derecho">Leer más</a>
+  </div>
+</div>
+</body>
+</html>
